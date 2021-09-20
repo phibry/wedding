@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-/*
-FFB6B9 
-FAE3D9
-BBDED6
-61C0BF
-*/
+$main-color-1: #FCB5AF;
+$sub-color-1: #FDECE4;
+
+$main-color-2: #61C0BF;
+$sub-color-2: #BBDED6;
+
+$main-color-3: #A6C1EE;
+$sub-color-3: #DDE3FD;
+
+$padding-1: 30px;
 
 * {
   box-sizing: border-box;
@@ -15,27 +19,102 @@ BBDED6
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: rgb(77, 77, 77);
+  background-color: $main-color-1;
+  font-size: 24px;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-}
-
-.box1 {
+section {
+  height: 100vh;
   display: flex;
-  background: #FFB6B9;
-
-  text-align: center;
   justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
 }
-.box2 {
-  background: #FAE3D9;
+
+// Container
+.container {
+  height: 100vh;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+
+  // Section 1
+  .section-1 {
+
+    // Card
+    .card {
+      background-color: $sub-color-1;
+      width: 85vw;
+      height: 75vh;
+    
+      display: flex;
+      flex-direction: row;
+    
+      // Side
+      .side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 15%;
+        padding: $padding-1;
+      }
+
+      // Image
+      .img {
+        width: 35%;
+        padding: $padding-1 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          min-width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+        }
+      }
+    
+      // Main
+      .main {
+        padding: $padding-1;
+        width: 50%;
+        display: grid;
+
+        &-title {
+          padding-bottom: 21px;
+          border-bottom: 1px solid black;
+        }
+
+        &-p {
+          float: right;
+          width: 70%;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  // Section 2
+  .section-2 {
+    background-color: $main-color-2;
+
+    .card {
+      background-color: $sub-color-2;
+      width: 85vw;
+      height: 75vh;
+    }
+  }
+
+  // Section 3
+  .section-3 {
+    background-color: $main-color-3;
+
+    .card {
+      background-color: $sub-color-3;
+      width: 85vw;
+      height: 75vh;
+    }
+  }
 }
-.box3 {
-  background: #BBDED6;
-}
-.box4 {
-  background: #61C0BF;
-}
+
+
