@@ -12,6 +12,8 @@ $sub-color-3: #DDE3FD;
 
 $padding-1: 30px;
 
+$border-radius-1: 5px;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,6 +41,7 @@ body {
   
     display: flex;
     flex-direction: row;
+    border-radius: $border-radius-1;
   
     // Side
     .side {
@@ -54,6 +57,7 @@ body {
       width: 35%;
       padding: $padding-1 0;
       position: relative;
+      border-radius: $border-radius-1;
 
       &::after {
         content: "";
@@ -64,12 +68,14 @@ body {
         background: $main-color-3;
         // background-image: linear-gradient(200deg, $main-color-3, $sub-color-3);
         opacity: .4;
+        border-radius: $border-radius-1;
       }
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: $border-radius-1;
       }
     }
   
@@ -81,10 +87,17 @@ body {
 
       &-button {
         a {
+          position: relative;
+          top: 30px;
           text-decoration: none;
           background: $main-color-3;
-          border-radius: 5px;
-          padding: 5px;
+          border-radius: $border-radius-1;
+          padding: 30px;
+          color: black;
+
+          &:hover {
+            background: #7fa6e9;
+          }
         }
       }
 

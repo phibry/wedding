@@ -36,6 +36,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  border-radius: 5px;
 }
 
 .container .card .side {
@@ -57,6 +58,7 @@ body {
   width: 35%;
   padding: 30px 0;
   position: relative;
+  border-radius: 5px;
 }
 
 .container .card .img::after {
@@ -67,6 +69,7 @@ body {
   height: calc(100% - 60px);
   background: #A6C1EE;
   opacity: .4;
+  border-radius: 5px;
 }
 
 .container .card .img img {
@@ -74,6 +77,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
 }
 
 .container .card .main {
@@ -84,10 +88,17 @@ body {
 }
 
 .container .card .main-button a {
+  position: relative;
+  top: 30px;
   text-decoration: none;
   background: #A6C1EE;
   border-radius: 5px;
-  padding: 5px;
+  padding: 30px;
+  color: black;
+}
+
+.container .card .main-button a:hover {
+  background: #7fa6e9;
 }
 
 .container .card .main-info-title {
