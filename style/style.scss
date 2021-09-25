@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+// Variables
 $main-color-1: #FCB5AF;
 $sub-color-1: #FDECE4;
 
@@ -19,100 +20,86 @@ $padding-1: 30px;
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: $main-color-1;
+  background-color: $main-color-3;
   font-size: 24px;
-}
-
-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
 }
 
 // Container
 .container {
   height: 100vh;
-  scroll-snap-type: y proximity;
-  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  // Section 1
-  .section-1 {
-
-    // Card
-    .card {
-      background-color: $sub-color-1;
-      width: 85vw;
-      height: 75vh;
-    
+  // Card
+  .card {
+    background-color: $sub-color-3;
+    width: 85vw;
+    height: 75vh;
+  
+    display: flex;
+    flex-direction: row;
+  
+    // Side
+    .side {
       display: flex;
-      flex-direction: row;
-    
-      // Side
-      .side {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 15%;
-        padding: $padding-1;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 15%;
+      padding: $padding-1;
+    }
+
+    // Image
+    .img {
+      width: 35%;
+      padding: $padding-1 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 60px);
+        background: $main-color-3;
+        // background-image: linear-gradient(200deg, $main-color-3, $sub-color-3);
+        opacity: .4;
       }
 
-      // Image
-      .img {
-        width: 35%;
-        padding: $padding-1 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    // Main
+    .main {
+      padding: $padding-1;
+      width: 50%;
+      display: grid;
 
-        img {
-          min-width: 100%;
-          min-height: 100%;
-          object-fit: cover;
+      &-button {
+        a {
+          text-decoration: none;
+          background: $main-color-3;
+          border-radius: 5px;
+          padding: 5px;
         }
       }
-    
-      // Main
-      .main {
-        padding: $padding-1;
-        width: 50%;
-        display: grid;
 
+      &-info {
         &-title {
           padding-bottom: 21px;
           border-bottom: 1px solid black;
         }
-
+  
         &-p {
           float: right;
           width: 70%;
           padding-top: 20px;
         }
       }
-    }
-  }
-
-  // Section 2
-  .section-2 {
-    background-color: $main-color-2;
-
-    .card {
-      background-color: $sub-color-2;
-      width: 85vw;
-      height: 75vh;
-    }
-  }
-
-  // Section 3
-  .section-3 {
-    background-color: $main-color-3;
-
-    .card {
-      background-color: $sub-color-3;
-      width: 85vw;
-      height: 75vh;
     }
   }
 }
