@@ -76,7 +76,7 @@ a {
   // Image
   .img {
     width: 35%;
-    padding: $padding-1 $padding-2;
+    // padding: $padding-1 $padding-2;
     position: relative;
     border-radius: $border-radius-1;
 
@@ -100,7 +100,8 @@ a {
 
   // Main
   .main {
-    padding: $padding-1 $padding-2 $padding-1 $padding-1;
+    // padding: $padding-1 $padding-2 $padding-1 $padding-1;
+    padding: $padding-1 $padding-2;
     width: 65%;
     display: grid;
 

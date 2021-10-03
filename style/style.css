@@ -66,7 +66,6 @@ a {
 
 .container .img {
   width: 35%;
-  padding: 30px 60px;
   position: relative;
   border-radius: 3px;
 }
@@ -90,7 +89,7 @@ a {
 }
 
 .container .main {
-  padding: 30px 60px 30px 30px;
+  padding: 30px 60px;
   width: 65%;
   display: -ms-grid;
   display: grid;
