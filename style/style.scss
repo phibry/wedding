@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@font-face {
+  font-family: 'Quickpen';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quickpen'), url('Trial by Cupcakes - Quickpen.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Adobe Caslon Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Adobe Caslon Pro Regular'), url('ACaslonPro-Regular.woff') format('woff');
+}
+
 // Variables
 $main-color-1: #FCB5AF;
 $sub-color-1: #FDECE4;
+
+$color-theme-1: #A5896A;
 
 $main-color-2: #61C0BF;
 $sub-color-2: #BBDED6;
@@ -11,8 +27,9 @@ $main-color-3: #A6C1EE;
 $sub-color-3: #DDE3FD;
 
 $padding-1: 30px;
+$padding-2: 60px;
 
-$border-radius-1: 5px;
+$border-radius-1: 3px;
 
 * {
   box-sizing: border-box;
@@ -21,9 +38,21 @@ $border-radius-1: 5px;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: $main-color-3;
+  // font-family: 'Quickpen', sans-serif;
+  background-color: $main-color-1;
   font-size: 24px;
+}
+
+h1 {
+  font-family: 'Quickpen', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'PT Serif', serif;
+}
+
+p,
+a {
+  font-family: 'Adobe Caslon Pro Regular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 // Container
@@ -35,83 +64,105 @@ body {
 
   // Card
   .card {
-    background-color: $sub-color-3;
-    width: 85vw;
+    background-color: $sub-color-1;
+    width: 75vw;
     height: 75vh;
   
     display: flex;
     flex-direction: row;
     border-radius: $border-radius-1;
-  
-    // Side
-    .side {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 15%;
-      padding: $padding-1;
-    }
+  }
 
-    // Image
-    .img {
-      width: 35%;
-      padding: $padding-1 0;
-      position: relative;
+  // Image
+  .img {
+    width: 35%;
+    padding: $padding-1 $padding-2;
+    position: relative;
+    border-radius: $border-radius-1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 60px);
+      opacity: .4;
       border-radius: $border-radius-1;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 60px);
-        background: $main-color-3;
-        // background-image: linear-gradient(200deg, $main-color-3, $sub-color-3);
-        opacity: .4;
-        border-radius: $border-radius-1;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: $border-radius-1;
-      }
     }
-  
-    // Main
-    .main {
-      padding: $padding-1;
-      width: 50%;
-      display: grid;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $border-radius-1;
+    }
+  }
+
+  // Main
+  .main {
+    padding: $padding-1 $padding-2 $padding-1 $padding-1;
+    width: 65%;
+    display: grid;
+
+    // Header
+    &-header {
+      display: flex;
+      justify-content: space-between;
 
       &-button {
-        a {
+        .btn {
           position: relative;
           top: 30px;
           text-decoration: none;
-          background: $main-color-3;
+          // background: $main-color-1;
           border-radius: $border-radius-1;
-          padding: 30px;
+          border: 0.5px dotted $main-color-1;
+          padding: $padding-1;
           color: black;
-
+        
           &:hover {
-            background: #7fa6e9;
+            background: $main-color-1;
           }
         }
       }
 
-      &-info {
-        &-title {
-          padding-bottom: 21px;
-          border-bottom: 1px solid black;
+      &-date {
+        padding: $padding-1;
+      }
+    }
+
+    // Info
+    &-info {
+      &-title {
+        padding-bottom: 20px;
+      }
+
+      &-p {
+        width: 100%;
+      }
+    }
+
+    // BTN
+    &-infoBtn {
+      // position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn2 {
+        // position: absolute;
+        // bottom: 30px;
+        // right: 30px;
+        background: #ff8f85;  
+        &:hover {
+          background: #fc8378;
         }
-  
-        &-p {
-          float: right;
-          width: 70%;
-          padding-top: 20px;
-        }
+
+        text-decoration: none;
+
+        border-radius: $border-radius-1;
+        padding: $padding-1;
+        color: black;
       }
     }
   }
