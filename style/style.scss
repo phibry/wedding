@@ -80,16 +80,6 @@ a {
     position: relative;
     border-radius: $border-radius-1;
 
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   left: 0;
-    //   width: 100%;
-    //   height: calc(100% - 60px);
-    //   opacity: .4;
-    //   border-radius: $border-radius-1;
-    // }
-
     img {
       width: 100%;
       height: 100%;
@@ -145,15 +135,11 @@ a {
 
     // BTN
     &-infoBtn {
-      // position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
 
       .btn2 {
-        // position: absolute;
-        // bottom: 30px;
-        // right: 30px;
         background: #ff8f85;  
         &:hover {
           background: #fc8378;
@@ -172,11 +158,18 @@ a {
 @media (max-width: 1024px) {
   .container {
     .card {
-      width: 90vw;
-      height: 90vh;
+      width: 100vw;
+      height: 100vh;
+
+      .img {
+        width: 45vw;
+      }
+
+
 
       .main {
         padding: 15px 30px;
+        width: 55vw;
       }
     }
   }
@@ -263,19 +256,18 @@ a {
 
       .img {
         width: 100vw;
-        height: 30vh;
+        height: 40vh;
 
         img {
           object-position: 0px -65px;
         }
-
       }
 
       .main {
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 70%;
+        height: 60vh;
         padding: 0;
 
         &-header {
@@ -307,6 +299,9 @@ a {
 }
 
 @media (max-width: 370px) {
+  body {
+    overflow: hidden;
+  }
   h1 {
     font-size: 28px;
   }
@@ -324,7 +319,7 @@ a {
 
       .img {
         width: 100vw;
-        height: 30vh;
+        height: 40vh;
 
         img {
           object-position: 0px -65px;
@@ -336,7 +331,7 @@ a {
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 70%;
+        height: 60vh;
         padding: 0;
 
         &-header {

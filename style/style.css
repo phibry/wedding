@@ -146,11 +146,15 @@ a {
 
 @media (max-width: 1024px) {
   .container .card {
-    width: 90vw;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
+  }
+  .container .card .img {
+    width: 45vw;
   }
   .container .card .main {
     padding: 15px 30px;
+    width: 55vw;
   }
 }
 
@@ -223,7 +227,7 @@ a {
   }
   .container .card .img {
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
   }
   .container .card .img img {
     -o-object-position: 0px -65px;
@@ -238,7 +242,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100vw;
-    height: 70%;
+    height: 60vh;
     padding: 0;
   }
   .container .card .main-header-date {
@@ -257,6 +261,9 @@ a {
 }
 
 @media (max-width: 370px) {
+  body {
+    overflow: hidden;
+  }
   h1 {
     font-size: 28px;
   }
@@ -273,7 +280,7 @@ a {
   }
   .container .card .img {
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
   }
   .container .card .img img {
     -o-object-position: 0px -65px;
@@ -288,7 +295,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100vw;
-    height: 70%;
+    height: 60vh;
     padding: 0;
   }
   .container .card .main-header-date {
