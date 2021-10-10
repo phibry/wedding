@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// Import Variables
+@import 'var';
+
+@font-face {
+  font-family: 'Quickpen';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quickpen'), url('fonts/Trial\ by\ Cupcakes\ -\ Quickpen.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Adobe Caslon Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Adobe Caslon Pro Regular'), url('fonts/ACaslonPro-Regular.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // font-family: 'Quickpen', sans-serif;
+  background-color: $main-color-1;
+  font-size: 24px;
+}
+
+h1 {
+  // font-family: 'Quickpen', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  // font-family: 'PT Serif', serif;
+}
+
+p,
+a,
+button {
+  // font-family: 'Adobe Caslon Pro Regular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// Landing Page
+@import 'landing';
+
+// Wedding Page
+@import 'wedding'

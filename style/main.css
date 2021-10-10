@@ -3,14 +3,14 @@
   font-family: 'Quickpen';
   font-style: normal;
   font-weight: normal;
-  src: local("Quickpen"), url("Trial by Cupcakes - Quickpen.woff") format("woff");
+  src: local("Quickpen"), url("fonts/Trial by Cupcakes - Quickpen.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Adobe Caslon Pro Regular';
   font-style: normal;
   font-weight: normal;
-  src: local("Adobe Caslon Pro Regular"), url("ACaslonPro-Regular.woff") format("woff");
+  src: local("Adobe Caslon Pro Regular"), url("fonts/ACaslonPro-Regular.woff") format("woff");
 }
 
 * {
@@ -35,7 +35,15 @@ button {
   font-family: 'Montserrat', sans-serif;
 }
 
-.container {
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.landing-container {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,7 +56,7 @@ button {
           align-items: center;
 }
 
-.container .card {
+.landing-container .card {
   background-color: #FDECE4;
   width: 75vw;
   height: 75vh;
@@ -62,13 +70,13 @@ button {
   border-radius: 3px;
 }
 
-.container .img {
+.landing-container .img {
   width: 35%;
   position: relative;
   border-radius: 3px;
 }
 
-.container .img img {
+.landing-container .img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -76,14 +84,14 @@ button {
   border-radius: 3px;
 }
 
-.container .main {
+.landing-container .main {
   padding: 30px 60px;
   width: 65%;
   display: -ms-grid;
   display: grid;
 }
 
-.container .main-header {
+.landing-container .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +100,7 @@ button {
           justify-content: space-between;
 }
 
-.container .main-header-button .btn {
+.landing-container .main-header-button .btn {
   position: relative;
   top: 30px;
   text-decoration: none;
@@ -102,23 +110,23 @@ button {
   color: black;
 }
 
-.container .main-header-button .btn:hover {
+.landing-container .main-header-button .btn:hover {
   background: #FCB5AF;
 }
 
-.container .main-header-date {
+.landing-container .main-header-date {
   padding: 30px;
 }
 
-.container .main-info-title {
+.landing-container .main-info-title {
   padding-bottom: 20px;
 }
 
-.container .main-info-p {
+.landing-container .main-info-p {
   width: 100%;
 }
 
-.container .main-infoBtn {
+.landing-container .main-infoBtn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +138,7 @@ button {
           justify-content: center;
 }
 
-.container .main-infoBtn .btn2 {
+.landing-container .main-infoBtn .btn2 {
   font-size: 24px;
   border: none;
   background: #ff8f85;
@@ -140,34 +148,34 @@ button {
   color: black;
 }
 
-.container .main-infoBtn .btn2:hover {
+.landing-container .main-infoBtn .btn2:hover {
   cursor: pointer;
   background: #fc8378;
 }
 
 @media (max-width: 1024px) {
-  .container .card {
+  .landing-container .card {
     width: 100vw;
     height: 100vh;
   }
-  .container .card .img {
+  .landing-container .card .img {
     width: 45vw;
   }
-  .container .card .main {
+  .landing-container .card .main {
     padding: 15px 30px;
     width: 55vw;
   }
 }
 
 @media (max-width: 768px) {
-  h1 {
+  .landing-container h1 {
     font-size: 40px;
   }
-  p {
+  .landing-container p {
     font-size: 24px;
     padding: 0 10px;
   }
-  .container .card {
+  .landing-container .card {
     width: 100vw;
     height: 100vh;
     -webkit-box-orient: vertical;
@@ -175,15 +183,15 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container .card .img {
+  .landing-container .card .img {
     width: 100vw;
     height: 40vh;
   }
-  .container .card .img img {
+  .landing-container .card .img img {
     -o-object-position: 0px -125px;
        object-position: 0px -125px;
   }
-  .container .card .main {
+  .landing-container .card .main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -195,30 +203,30 @@ button {
     height: 60%;
     padding: 0;
   }
-  .container .card .main-header-date {
+  .landing-container .card .main-header-date {
     padding: 10px;
   }
-  .container .card .main-info-title {
+  .landing-container .card .main-info-title {
     padding-left: 10px;
   }
-  .container .card .main-infoBtn {
+  .landing-container .card .main-infoBtn {
     display: block;
     margin: auto;
   }
-  .container .card .main-infoBtn-center .btn2 {
+  .landing-container .card .main-infoBtn-center .btn2 {
     padding: 25px;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
+  .landing-container h1 {
     font-size: 28px;
   }
-  p {
+  .landing-container p {
     font-size: 16px;
     padding: 0 10px;
   }
-  .container .card {
+  .landing-container .card {
     width: 100vw;
     height: 100vh;
     -webkit-box-orient: vertical;
@@ -226,15 +234,15 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container .card .img {
+  .landing-container .card .img {
     width: 100vw;
     height: 40vh;
   }
-  .container .card .img img {
+  .landing-container .card .img img {
     -o-object-position: 0px -65px;
        object-position: 0px -65px;
   }
-  .container .card .main {
+  .landing-container .card .main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -246,32 +254,29 @@ button {
     height: 60vh;
     padding: 0;
   }
-  .container .card .main-header-date {
+  .landing-container .card .main-header-date {
     padding: 10px;
   }
-  .container .card .main-info-title {
+  .landing-container .card .main-info-title {
     padding-left: 10px;
   }
-  .container .card .main-infoBtn {
+  .landing-container .card .main-infoBtn {
     display: block;
     margin: auto;
   }
-  .container .card .main-infoBtn-center .btn2 {
+  .landing-container .card .main-infoBtn-center .btn2 {
     padding: 25px;
   }
 }
 
 @media (max-width: 370px) {
-  body {
-    overflow: hidden;
-  }
-  h1 {
+  .landing-container h1 {
     font-size: 28px;
   }
-  p {
+  .landing-container p {
     font-size: 16px;
   }
-  .container .card {
+  .landing-container .card {
     width: 100vw;
     height: 100vh;
     -webkit-box-orient: vertical;
@@ -279,15 +284,15 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container .card .img {
+  .landing-container .card .img {
     width: 100vw;
     height: 40vh;
   }
-  .container .card .img img {
+  .landing-container .card .img img {
     -o-object-position: 0px -65px;
        object-position: 0px -65px;
   }
-  .container .card .main {
+  .landing-container .card .main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -299,18 +304,18 @@ button {
     height: 60vh;
     padding: 0;
   }
-  .container .card .main-header-date {
+  .landing-container .card .main-header-date {
     padding: 10px;
   }
-  .container .card .main-info-title {
+  .landing-container .card .main-info-title {
     padding-left: 10px;
   }
-  .container .card .main-infoBtn {
+  .landing-container .card .main-infoBtn {
     display: block;
     margin: auto;
   }
-  .container .card .main-infoBtn-center .btn2 {
+  .landing-container .card .main-infoBtn-center .btn2 {
     padding: 25px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

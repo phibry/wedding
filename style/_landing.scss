@@ -1,63 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
-@font-face {
-  font-family: 'Quickpen';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Quickpen'), url('Trial by Cupcakes - Quickpen.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Adobe Caslon Pro Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Adobe Caslon Pro Regular'), url('ACaslonPro-Regular.woff') format('woff');
-}
-
-// Variables
-$main-color-1: #FCB5AF;
-$sub-color-1: #FDECE4;
-
-$color-theme-1: #A5896A;
-
-$main-color-2: #61C0BF;
-$sub-color-2: #BBDED6;
-
-$main-color-3: #A6C1EE;
-$sub-color-3: #DDE3FD;
-
-$padding-1: 30px;
-$padding-2: 60px;
-
-$border-radius-1: 3px;
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  // font-family: 'Quickpen', sans-serif;
-  background-color: $main-color-1;
-  font-size: 24px;
-}
-
-h1 {
-  // font-family: 'Quickpen', sans-serif;
-  font-family: 'Roboto Slab', serif;
-  // font-family: 'PT Serif', serif;
-}
-
-p,
-a,
-button {
-  // font-family: 'Adobe Caslon Pro Regular', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-}
-
-// Container
-.container {
+.landing-container {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -160,7 +101,7 @@ button {
 }
 
 @media (max-width: 1024px) {
-  .container {
+  .landing-container {
     .card {
       width: 100vw;
       height: 100vh;
@@ -180,16 +121,15 @@ button {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 40px;
-  }
-
-  p {
-    font-size: 24px;
-    padding: 0 10px;
-  }
-
-  .container {
+  .landing-container {
+    h1 {
+      font-size: 40px;
+    }
+  
+    p {
+      font-size: 24px;
+      padding: 0 10px;
+    }
     .card {
       width: 100vw;
       height: 100vh;
@@ -242,16 +182,15 @@ button {
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  .container {
+  .landing-container {
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 16px;
+      padding: 0 10px;
+    }
     .card {
       width: 100vw;
       height: 100vh;
@@ -303,18 +242,15 @@ button {
 }
 
 @media (max-width: 370px) {
-  body {
-    overflow: hidden;
-  }
-  h1 {
-    font-size: 28px;
-  }
+  .landing-container {
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
 
-  p {
-    font-size: 16px;
-  }
-
-  .container {
     .card {
       width: 100vw;
       height: 100vh;
@@ -360,9 +296,6 @@ button {
           }
         }
       }
-
-
     }
   }
 }
-
