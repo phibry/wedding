@@ -44,14 +44,15 @@ body {
 }
 
 h1 {
-  font-family: 'Quickpen', sans-serif;
+  // font-family: 'Quickpen', sans-serif;
   font-family: 'Roboto Slab', serif;
-  font-family: 'PT Serif', serif;
+  // font-family: 'PT Serif', serif;
 }
 
 p,
-a {
-  font-family: 'Adobe Caslon Pro Regular', sans-serif;
+a,
+button {
+  // font-family: 'Adobe Caslon Pro Regular', sans-serif;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -140,8 +141,11 @@ a {
       justify-content: center;
 
       .btn2 {
+        font-size: 24px;
+        border: none;
         background: #ff8f85;  
         &:hover {
+          cursor: pointer;
           background: #fc8378;
         }
 
