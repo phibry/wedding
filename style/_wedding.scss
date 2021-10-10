@@ -1,0 +1,52 @@
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: $main-color-3;
+
+  .nav {
+    margin: 0 auto;
+    height: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-menu {
+      @media screen and (max-width: 768px) {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        padding: 2.5rem 0 0;
+        text-align: center;
+        background-color: var(--nav-color);
+        transition: .4s;
+        box-shadow: 0 0 4px rgba(0,0,0,.1);
+        border-radius: 2rem;
+        z-index: 100;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+
+      &-item {
+        margin-left: 2.5rem;
+      }
+    }
+
+    &-link {
+      color: #DDE3FD;
+      transition: color 0.1s ease;
+
+      &:hover {
+        color: #4a6bff;
+      }
+    }
+  }
+}
