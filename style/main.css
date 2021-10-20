@@ -21,8 +21,11 @@
 }
 
 body {
-  background-color: #FCB5AF;
   font-size: 24px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -54,6 +57,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #FCB5AF;
 }
 
 .landing-container .card {
@@ -319,13 +323,110 @@ ul {
   }
 }
 
+.scroll-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: -20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  padding: 0.5rem;
+  background: #FDECE4;
+  opacity: 0.7;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: hidden;
+}
+
+.scroll-top:hover {
+  opacity: 1;
+}
+
+.scroll-top-icon {
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.show-scroll {
+  bottom: 1.5rem;
+  visibility: visible;
+}
+
+.active {
+  position: relative;
+}
+
+.active:hover::before {
+  background: #FCB5AF;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  width: 5px;
+  height: 5px;
+  background: #333;
+  left: 45%;
+  border-radius: 50%;
+}
+
+.nav-toggle {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-toggle .line {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #333;
+}
+
+.nav-toggle .line1 {
+  top: 31px;
+  right: 29px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle .rotate1 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 35px;
+}
+
+.nav-toggle .line2 {
+  top: 39px;
+  right: 29px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle .rotate2 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 35px;
+}
+
 .header {
   top: 0;
   left: 0;
   width: 100%;
   position: fixed;
   z-index: 100;
-  background-color: #A6C1EE;
+  background-color: #FDECE4;
 }
 
 .header .nav {
@@ -352,7 +453,7 @@ ul {
     margin: 0 auto;
     padding: 2.5rem 0 0;
     text-align: center;
-    background-color: var(--nav-color);
+    background-color: #FDECE4;
     -webkit-transition: .4s;
     transition: .4s;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -376,12 +477,37 @@ ul {
 }
 
 .header .nav-link {
-  color: #DDE3FD;
+  color: #333;
   -webkit-transition: color 0.1s ease;
   transition: color 0.1s ease;
 }
 
 .header .nav-link:hover {
-  color: #4a6bff;
+  color: #FCB5AF;
+}
+
+.show-menu {
+  top: 6rem;
+}
+
+main section {
+  margin: 1rem 0;
+  padding: 5rem 0;
+}
+
+main .container {
+  height: 100vh;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-toggle {
+    display: block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

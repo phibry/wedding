@@ -1,0 +1,23 @@
+// Media Queries
+// Laptops, big tablets
+@media (min-width: 769px) and (max-width: 1024px) {}
+
+// Tablets
+@media (min-width: 481px) and (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+}
+
+// Smartphones
+@media (max-width: 480px) {
+  .nav-toggle {
+    display: block;
+  }
+}
+
+// Smaller Phones
+@media (max-width: 370px) {}
+
+// Smaller Phones
+@media (max-width: 300px) {}

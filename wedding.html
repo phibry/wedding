@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style/main.css" />
-    <script
-      src="https://kit.fontawesome.com/71e1dec467.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,32 +19,67 @@
     <title>Liäblingsmänsch</title>
   </head>
   <body>
+    <!-- Scroll Top Arrow -->
+    <a href="#" class="scroll-top scroll-top-icon">
+      <span class="material-icons">expand_less</span>
+    </a>
+    <!-- Header Section -->
     <header class="header">
+      <!-- Navigation -->
       <nav class="nav">
-        <div class="nav-menu">
+        <a href="#" class="nav-logo">phibry</a>
+
+        <div class="nav-menu" id="nav-menu">
           <ul class="nav-list">
             <li class="nav-list-item">
-              <a href="" class="nav-link active">Kapelle</a>
+              <a href="#process" class="nav-link active">Ablauf</a>
             </li>
             <li class="nav-list-item">
-              <a href="" class="nav-link active">Location</a>
+              <a href="#location" class="nav-link">Locations</a>
             </li>
             <li class="nav-list-item">
-              <a href="" class="nav-link active">Info</a>
+              <a href="#info" class="nav-link">Informationen</a>
             </li>
             <li class="nav-list-item">
-              <a href="" class="nav-link active">Anmelden</a>
+              <a href="#registration" class="nav-link">Anmeldung</a>
             </li>
           </ul>
+        </div>
+        <!-- Mobile Hamburger -->
+        <div id="nav-toggle" class="nav-toggle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
         </div>
       </nav>
     </header>
 
+    <!-- Main Content -->
     <main>
-      <section id="chapel">Kapelle</section>
-      <section id="location">Festhaus</section>
-      <section id="info">Ablauf & Anreise</section>
-      <section id="registration">Anmeldung</section>
+      <!-- Ablauf -->
+      <section id="process" class="process">
+        <div class="container process-container">Ablauf</div>
+      </section>
+
+      <!-- Location -->
+      <section id="location" class="location">
+        <div class="container location-container">Locations</div>
+      </section>
+
+      <!-- Information -->
+      <section id="info" class="info">
+        <div class="container info-container">Informationen</div>
+      </section>
+
+      <!-- Anmeldung -->
+      <section id="registration" class="registration">
+        <div class="container registration-container">Anmeldung</div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer container">footerino</footer>
     </main>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
   </body>
 </html>
