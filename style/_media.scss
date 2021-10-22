@@ -3,17 +3,44 @@
 @media (min-width: 769px) and (max-width: 1024px) {}
 
 // Tablets
-@media (min-width: 481px) and (max-width: 768px) {
+// @media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .nav-toggle {
     display: block;
+  }
+
+  .nav {
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &-item {
+      margin-left: 0 !important;
+      margin-bottom: 1.5rem;
+    }
   }
 }
 
 // Smartphones
 @media (max-width: 480px) {
-  .nav-toggle {
-    display: block;
-  }
+  // .nav-toggle {
+  //   display: block;
+  // }
+
+  // .nav {
+  //   &-list {
+  //     display: flex;
+  //     align-items: center;
+  //     flex-direction: column;
+  //   }
+
+  //   &-item {
+  //     margin-bottom: 1.5rem;
+  //     margin-left: 0 !important;
+  //   }
+  // }
 }
 
 // Smaller Phones

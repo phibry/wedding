@@ -88,57 +88,84 @@
   }
 }
 
+.container {
+  max-width: 1250px;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 // Header
-.header {
+#header {
   top: 0;
   left: 0;
   width: 100%;
   position: fixed;
   z-index: 100;
   background-color: $sub-color-1;
+}
 
-  .nav {
-    margin: 0 auto;
-    height: 4.5rem;
+.nav {
+  margin: 0 auto;
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-menu {
+    @media screen and (max-width: 768px) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      right: 0;
+      width: 90%;
+      margin: 0 auto;
+      padding: 2.5rem 0 0;
+      text-align: center;
+      background-color: $sub-color-1;
+      transition: .4s;
+      box-shadow: 0 0 4px rgba(0,0,0,.1);
+      border-radius: 2rem;
+      z-index: 100;
+    }
+  }
+
+  &-list {
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    &-menu {
-      @media screen and (max-width: 768px) {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        right: 0;
-        width: 90%;
-        margin: 0 auto;
-        padding: 2.5rem 0 0;
-        text-align: center;
-        background-color: $sub-color-1;
-        transition: .4s;
-        box-shadow: 0 0 4px rgba(0,0,0,.1);
-        border-radius: 2rem;
-        z-index: 100;
-      }
+    &-item {
+      margin-left: 2.5rem;
     }
+  }
 
-    &-list {
-      display: flex;
-      align-items: center;
+  &-link,
+  &-logo,
+  &-item {
+    color: #333;
+  }
 
-      &-item {
-        margin-left: 2.5rem;
-      }
+  &-logo {
+    transition: all 500ms cubic-bezier(0.2, 1, 0.2, 1);
+
+    &:hover {
+      color: $main-color-1;
+      transform: scale(1.1);
+      transform: color;
     }
+  }
 
-    &-link {
-      color: #333;
-      transition: color 0.1s ease;
+  &-link {
+    // color: #333;
+    transition: color 0.1s ease;
 
-      &:hover {
-        color: $main-color-1;
-      }
+    &:hover {
+      color: $main-color-1;
     }
+  }
+
+  &-toggle {
+    cursor: pointer;
   }
 }
 
