@@ -81,21 +81,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      // padding: $padding-1;
+
+      &-center {
+        padding: $padding-1;
+      }
 
       .btn2 {
         font-size: 24px;
+        font-weight: 600;
         border: none;
+        text-decoration: none;
+
+        border-radius: $border-radius-1;
+        color: black;
+
+        padding: $padding-1;
         background: #ff8f85;  
+
         &:hover {
           cursor: pointer;
           background: #fc8378;
         }
-
-        text-decoration: none;
-
-        border-radius: $border-radius-1;
-        padding: $padding-1;
-        color: black;
       }
     }
   }

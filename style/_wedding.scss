@@ -1,3 +1,6 @@
+body {
+  font-size: 16px;
+}
 // Scroll arrow
 .scroll-top {
   position: fixed;
@@ -103,6 +106,7 @@
   position: fixed;
   z-index: 100;
   background-color: $sub-color-1;
+  font-weight: 600;
 }
 
 .nav {
@@ -130,13 +134,13 @@
     }
   }
 
+  &-item {
+    margin-left: 2.5rem;
+  }
+
   &-list {
     display: flex;
     align-items: center;
-
-    &-item {
-      margin-left: 2.5rem;
-    }
   }
 
   &-link,
@@ -182,16 +186,25 @@ main {
 
   .container {
     height: 100vh;
+    margin: 0 auto;
   }
 
-    // process
-    // .process {
-    //   height: 100vh;
-    // }
+  // process
+  .process-container {
+    display: grid;
+  }
 
     // location
 
     // info
 
     // registration
+
+    // footer
+    footer {
+      background-color: $main-color-1;
+      .container {
+        height: 150px;
+      }
+    }
 }
