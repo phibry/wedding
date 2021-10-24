@@ -28,7 +28,7 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: 'Roboto Slab', serif;
 }
 
@@ -540,6 +540,19 @@ main .container {
 main .process-container {
   display: -ms-grid;
   display: grid;
+}
+
+main .form {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main .form h2 {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+main .form p {
+  padding-top: 5px;
 }
 
 main footer {
