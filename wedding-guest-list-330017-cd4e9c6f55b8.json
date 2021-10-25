@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wedding-guest-list-330017",
+  "private_key_id": "cd4e9c6f55b8857acd39bdb37379a4de7d07eab7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDal+m5VZb1CA0M\nLG8OeWMGRfV9cAmoZ5IU5NSqVvGeokEw9GwO4imFXFvy2j2DZ5evNJLzIrot/VYg\n2xStmx2gFgKjq3gHT7zyZlN+pMckiiFjIprlvaCcu1RTKTh9F6+D2ZwHv2m33OKL\ngQatyqGYRA7UOVk3gd8pacSG7FHuUJtaSlMtq0MZ2OcOSqWitl+3OY1jQl2A3mF0\n2ACQEaBAsfGMefXoqu7wfZ/ZTtKu1zPZ0kI866uXGvvSNoKNwYSBIwDJ8Uu+f0PL\nlh+1rVNbRM/AR7yDjLX37u+XpS9ASif3OcWZ9pVqvFXJHrqL26E5KuVyDxJUcguY\nxftiE68zAgMBAAECggEADgFjuTsxo9tzMo96Qhwm6xT6aKIQDFkuc+ZBdfSCIJ7W\nvHM8pSt6a5ACWCoBfPTbNB+TNr7H3QB5TzuaNJFWsZYXbzMiSp2iRoml2dxm4gFz\nqC1kbUncC465FWbztpgY58K+i4SJGn2tijCnI+VyuxXJOXG/NJ4+lSGwtNBZY4Jq\nTXiku39PyvJOnnFuu5uNXykKTTJohoWhDDHwMGYi3CbvTgxxaEsbTSTGWXoBVUF2\nLmamTs7QNvFl4mXPFdALu5f/il+X02PI2GmhwEepEJhMaGQje0Jq2Q8G1lH8XXNR\n/AweklH+PP8qDGc+V8blLDaIaFoZLHpaYY5C+siQSQKBgQD0T5T2N6nWZgIxfXDC\n9HF8Z/wqY91m4Qv6zzI9h3+RZVOYCWUXrFLv6WyDH3Sy9/BKfNEU1HAREzhyVXqf\nAE06Kl8pJvP7fsqbjz4zzRzpUF3cPW9Ev0lNouRoBw5xK4T5pPHW9yu1e/P0E9Ju\nuvRv0SSADsIgo4tLKqZzKp0X1QKBgQDlDVVT7eTvdfODGbf6JooWLGcPVisAM0qX\nzA65Mn71qPYhHmErvZ+I+v2iOmjb50LiTKz/9bxZWz5dHaTvlgroBXOaCZaxrMya\nUsALAceB3XWsr76vxV3r7kIy3FINT76R6z2XTfP+S30lUP1cCC+At7oHFEGxs5ze\nTzwXynt25wKBgQCwq1vtMROAFwQ/BZclY98tN4UConTYkKU5Gdwa4oE9gyiQKTsR\ng2v2UbZGm9ioEuOQ+fG4PmdL8bo/89BYar9t8HYgLCsDEw0wsMUqcIkXryYwvbxY\n2nsHyWOiVnf7Hp1qafz4loTlGF2xgyQJLujUc0kR0ZpQP/Pax1zWq1ougQKBgCIP\nDn4RZLZasp/u5hVzP5s2dQipxnEcL15NAG93W7uJqTeZfdd0NdG3iJlj2A3C4IYn\n4p2Y263pzGcqLklV5T9E+ECSZm77A916qoW4eQMNfB72bwNR9LpNTlijvCuwjOTD\ntv/Vno9UiEJRPas+qFmaeDXvRCl5TL0dyRC8kglHAoGBAOaYfyxoekUPSdaKiNXw\nISN6C8oV6Mz2OG0eAe/LKZA3owlPNivStucrL13C9rivnCcwwU/P3eB0uer0eHJL\nQks4Xow3HJQx9IPFLGzVx2pVMbcENA84uni+AvHe+yxr305GVp76at89LE/+o6z2\nGWNrF30qPr4tG8Zv4YqVoOjO\n-----END PRIVATE KEY-----\n",
+  "client_email": "wedding-guest-list-account@wedding-guest-list-330017.iam.gserviceaccount.com",
+  "client_id": "115792267886543654127",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wedding-guest-list-account%40wedding-guest-list-330017.iam.gserviceaccount.com"
+}

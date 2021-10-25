@@ -1,3 +1,17 @@
+// Nav Bar Scroll Reveal
+const scrollHeader = () => {
+  const nav = document.getElementById('header');
+  // When the scroll is greater than 100, add the scroll-header class to the header tag
+  if (scrollY >= 100) {
+    nav.classList.add('scroll-header');
+    // nav.style.display = 'block';
+  } else {
+    // nav.style.display = 'none';
+    nav.classList.remove('scroll-header');
+  }
+};
+window.addEventListener('scroll', scrollHeader);
+
 // Show Scroll Top Button
 const scrollTop = () => {
   const scrollTop = document.querySelector('.scroll-top');

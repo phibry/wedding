@@ -11,9 +11,9 @@ body {
   align-items: center;
   z-index: 10;
   padding: 0.5rem;
-  background: $sub-color-1;
+  background: $main-color-1;
   opacity: 0.7;
-  border-radius: 0.5rem;
+  // border-radius: 0.5rem;
   transition: 0.2s;
   visibility: hidden;
 
@@ -98,6 +98,10 @@ body {
   margin-right: 1.5rem;
 }
 
+.scroll-header {
+  box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+
 // Header
 #header {
   top: 0;
@@ -129,7 +133,7 @@ body {
       background-color: $sub-color-1;
       transition: .4s;
       box-shadow: 0 0 4px rgba(0,0,0,.1);
-      border-radius: 2rem;
+      // border-radius: 2rem;
       z-index: 100;
     }
   }
@@ -194,29 +198,100 @@ main {
     display: grid;
   }
 
-    // location
+  // location
 
-    // info
+  // info
 
-    // registration
-    .form {
-      font-family: 'Montserrat', sans-serif;
+  // registration
+  .registration {
+    // background-color: $sub-color-1;
+    // display: flex;
 
-      h2 {
-        font-size: 18px;
-        padding-top: 20px;
-      }
+    &-container {
+      display: flex;
+      justify-content: center;
+    }
 
-      p {
-        padding-top: 5px;
+    &-form {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+
+      form {
+        // background-color: #fff;
+        margin: auto;
+        // width: 400px;
+        font-family: 'Montserrat', sans-serif;
+  
+        h2 {
+          font-size: 18px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          padding-left: 1rem;
+        }
+  
+        p {
+          padding-top: 5px;
+        }
+  
+        .contact-group {
+          display: flex;
+        }
+  
+        .contact-form {
+          position: relative;
+          padding: 0 1rem;
+        }
+  
+        .contact-text-container {
+          input[type=text],
+          input[type=email] {
+            width: 100%;
+            outline: none;
+            padding: 5px 0;
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #9ea1a3;
+            background-color: inherit;
+          }
+  
+          label {
+          // label.contact-input {
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            color: #9ea1a3;
+            padding: 5px 0;
+            font-size: 1rem;
+            pointer-events: none;
+            transition: 0.2s;
+          }
+  
+          input:focus ~ label,
+          input:valid ~ label {
+            top: -20px;
+            left: 1rem;
+            color: $main-color-1;
+            font-size: 0.8rem;
+          }
+        }
       }
     }
 
-    // footer
-    footer {
-      background-color: $main-color-1;
-      .container {
-        height: 150px;
-      }
+    &-desc {
+      width: 400px;
+      background-color: $sub-color-1;
     }
+  }
+
+
+  // footer
+  footer {
+    background-color: $sub-color-1;
+    .container {
+      height: 150px;
+    }
+  }
 }

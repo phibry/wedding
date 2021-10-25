@@ -84,162 +84,196 @@
 
       <!-- Anmeldung -->
       <section id="registration" class="registration">
+        <h1>Anmeldung</h1>
         <div class="container registration-container">
-          <h1>Anmeldung</h1>
+          <div class="registration-form">
+            <form
+              method="post"
+              autocomplete="off"
+              class="form"
+              name="google-sheet"
+            >
+              <!-- Person -->
+              <div class="contact-text-container">
+                <h2>Zur Person</h2>
+                <div class="contact-group">
+                  <div class="contact-name contact-form">
+                    <input
+                      type="text"
+                      class="contact-input"
+                      name="name"
+                      required
+                    />
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="contact-surname contact-form">
+                    <input
+                      type="text"
+                      class="contact-input"
+                      name="surname"
+                      required
+                    />
+                    <label for="surname">Vorname</label>
+                  </div>
+                </div>
 
-          <form
-            method="post"
-            autocomplete="off"
-            class="form"
-            name="google-sheet"
-          >
-            <!-- Person -->
-            <h2>Zur Person</h2>
-            <div class="contact-name contact-form">
-              <input type="text" class="contact-input" name="name" required />
-              <label for="name">Name</label>
-            </div>
-            <div class="contact-surname contact-form">
-              <input
-                type="text"
-                class="contact-input"
-                name="surname"
-                required
-              />
-              <label for="surname">Vorname</label>
-            </div>
-            <div class="contact-birthday contact-form">
-              <input type="text" name="birthday" placeholder="DD/MM/YYYY" />
-              <label for="birthday">Geburtstag</label>
-            </div>
-            <div class="contact-email contact-form">
-              <input type="email" class="contact-input" name="email" required />
-              <label for="email">Email</label>
-            </div>
+                <div class="contact-birthday contact-form">
+                  <input type="text" name="birthday" required />
+                  <label for="birthday"
+                    >Geburtstag <span>(DD-MM-YYYY)</span></label
+                  >
+                </div>
+                <div class="contact-email contact-form">
+                  <input
+                    type="email"
+                    class="contact-input"
+                    name="email"
+                    required
+                  />
+                  <label for="email">Email</label>
+                </div>
 
-            <!-- Adress -->
-            <h2>Zum Wohnort</h2>
-            <div class="contact-street contact-form">
-              <input type="text" class="contact-input" name="street" required />
-              <label for="street">Strasse</label>
-            </div>
-            <div class="contact-streetnr contact-form">
-              <input
-                type="number"
-                class="contact-input"
-                name="streetnr"
-                required
-              />
-              <label for="streetnr">Hausnummer</label>
-            </div>
-            <div class="contact-zip contact-form">
-              <input type="number" class="contact-input" name="zip" required />
-              <label for="zip">Postleitzahl</label>
-            </div>
-            <div class="contact-canton contact-form">
-              <input type="text" class="contact-input" name="canton" required />
-              <label for="canton">Kanton</label>
-            </div>
-            <div class="contact-land contact-form">
-              <input type="text" class="contact-input" name="land" required />
-              <label for="land">Land</label>
-            </div>
+                <!-- Adress -->
+                <h2>Zum Wohnort</h2>
+                <div class="contact-group">
+                  <div class="contact-street contact-form">
+                    <input
+                      type="text"
+                      class="contact-input"
+                      name="street"
+                      required
+                    />
+                    <label for="street">Strasse</label>
+                  </div>
+                  <div class="contact-streetnr contact-form">
+                    <input
+                      type="text"
+                      class="contact-input"
+                      name="streetnr"
+                      required
+                    />
+                    <label for="streetnr">Hausnummer</label>
+                  </div>
+                </div>
 
-            <!-- Party -->
-            <h2>Zum Fest</h2>
-            <div class="contact-sleep-radio">
-              <p>Schlafen</p>
-              <div class="contact-sleep contact-form">
-                <input
-                  type="radio"
-                  class="contact-input"
-                  id="one"
-                  name="sleep"
-                  value="1"
-                  required
-                />
-                <label for="one">1 Nacht</label>
+                <div class="contact-group">
+                  <div class="contact-zip contact-form">
+                    <input
+                      type="text"
+                      class="contact-input"
+                      name="zip"
+                      required
+                    />
+                    <label for="zip">Postleitzahl</label>
+                  </div>
+                  <div class="contact-location contact-form">
+                    <input
+                      type="text"
+                      class="contact-input"
+                      name="location"
+                      required
+                    />
+                    <label for="location">Ortschaft</label>
+                  </div>
+                </div>
+
+                <div class="contact-canton contact-form">
+                  <input
+                    type="text"
+                    class="contact-input"
+                    name="canton"
+                    required
+                  />
+                  <label for="canton">Kanton</label>
+                </div>
+                <div class="contact-land contact-form">
+                  <input
+                    type="text"
+                    class="contact-input"
+                    name="land"
+                    required
+                  />
+                  <label for="land">Land</label>
+                </div>
               </div>
 
-              <div class="contact-sleep contact-form">
-                <input
-                  type="radio"
-                  class="contact-input"
-                  id="two"
-                  name="sleep"
-                  value="2"
-                  required
-                />
-                <label for="two">2 Nächte</label>
+              <!-- Party -->
+              <h2>Zum Fest</h2>
+              <div class="contact-sleep-radio">
+                <p>Schlafen</p>
+                <div class="contact-sleep contact-form">
+                  <input
+                    type="radio"
+                    class="contact-input"
+                    id="one"
+                    name="sleep"
+                    value="1"
+                    required
+                  />
+                  <label for="one">1 Nacht</label>
+                </div>
+
+                <div class="contact-sleep contact-form">
+                  <input
+                    type="radio"
+                    class="contact-input-radio"
+                    id="two"
+                    name="sleep"
+                    value="2"
+                    required
+                  />
+                  <label for="two">2 Nächte</label>
+                </div>
+
+                <div class="contact-sleep contact-form">
+                  <input
+                    type="radio"
+                    class="contact-input-radio"
+                    id="zero"
+                    name="sleep"
+                    value="0"
+                    required
+                  />
+                  <label for="zero">Ohne Übernachtung</label>
+                </div>
               </div>
 
-              <div class="contact-sleep contact-form">
-                <input
-                  type="radio"
-                  class="contact-input"
-                  id="zero"
-                  name="sleep"
-                  value="0"
-                  required
-                />
-                <label for="zero">Ohne Übernachtung</label>
+              <div class="contact-food-radio">
+                <p>Ernährung</p>
+                <div class="contact-food contact-form">
+                  <input
+                    type="radio"
+                    class="contact-input-radio"
+                    id="vegi"
+                    value="vegi"
+                    name="food"
+                    required
+                  />
+                  <label for="vegi">Vegetarisch</label>
+                </div>
+                <div class="contact-food contact-form">
+                  <input
+                    type="radio"
+                    class="contact-input-radio"
+                    name="food"
+                    id="meat"
+                    value="meat"
+                    required
+                  />
+                  <label for="meat">Fleisch</label>
+                </div>
               </div>
-            </div>
 
-            <div class="contact-food-radio">
-              <p>Ernährung</p>
-              <div class="contact-food contact-form">
-                <input
-                  type="radio"
-                  class="contact-input"
-                  id="vegi"
-                  value="vegi"
-                  name="food"
-                  required
-                />
-                <label for="vegi">Vegetarisch</label>
-              </div>
-              <div class="contact-food contact-form">
-                <input
-                  type="radio"
-                  class="contact-input"
-                  name="food"
-                  id="meat"
-                  value="meat"
-                  required
-                />
-                <label for="meat">Fleisch</label>
-              </div>
-            </div>
-
-            <div class="contact-transport-radio">
-              <p>Anreise via</p>
-              <div class="contact-transport contact-form">
-                <input
-                  type="radio"
-                  class="contact-input"
-                  id="public-transport"
-                  name="transport"
-                  value="public-transport"
-                  required
-                />
-                <label for="public-transport">Öffentlicher Verkehr</label>
-              </div>
-              <div class="contact-transport contact-form">
-                <input
-                  type="radio"
-                  class="contact-input"
-                  id="car"
-                  name="transport"
-                  value="car"
-                  required
-                />
-                <label for="car">Auto</label>
-              </div>
-            </div>
-            <!-- <button type="submit">Anmelden</button> -->
-            <input type="submit" name="submit" value="Submit" />
-          </form>
+              <!-- <button type="submit">Anmelden</button> -->
+              <input type="submit" name="submit" value="Submit" />
+            </form>
+          </div>
+          <div class="registration-desc">
+            <p>Daten vertraulch bla bla blub</p>
+            <p>Daten vertraulch bla bla blub</p>
+            <p>Daten vertraulch bla bla blub</p>
+            <p>Daten vertraulch bla bla blub</p>
+          </div>
         </div>
       </section>
 
@@ -251,21 +285,6 @@
 
     <!-- JS -->
     <script src="js/main.js"></script>
-
-    <script>
-      // const scriptUrl =
-      // 'https://script.google.com/macros/s/AKfycbxS9Ddcv6P5Pk6KqlvMaC1CaDnqagwmC46YjdRwM2IO2Zr6gJSG4DNu7f9xQnie9chz9g/exec';
-      const form = document.forms['google-sheet'];
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        fetch(
-          'https://script.google.com/macros/s/AKfycbxS9Ddcv6P5Pk6KqlvMaC1CaDnqagwmC46YjdRwM2IO2Zr6gJSG4DNu7f9xQnie9chz9g/exec',
-          { method: 'POST', body: new FormData(form) }
-        )
-          .then((response) => alert('You have successfully submitted.'))
-          .catch((error) => console.error('Error!', error.message));
-      });
-    </script>
+    <script src="js/google.js"></script>
   </body>
 </html>

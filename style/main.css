@@ -347,9 +347,8 @@ body {
           align-items: center;
   z-index: 10;
   padding: 0.5rem;
-  background: #FDECE4;
+  background: #FCB5AF;
   opacity: 0.7;
-  border-radius: 0.5rem;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   visibility: hidden;
@@ -436,6 +435,11 @@ body {
   margin-right: 1.5rem;
 }
 
+.scroll-header {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
 #header {
   top: 0;
   left: 0;
@@ -475,7 +479,6 @@ body {
     transition: .4s;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-    border-radius: 2rem;
     z-index: 100;
   }
 }
@@ -542,21 +545,93 @@ main .process-container {
   display: grid;
 }
 
-main .form {
+main .registration-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .registration-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+}
+
+main .registration-form form {
+  margin: auto;
   font-family: 'Montserrat', sans-serif;
 }
 
-main .form h2 {
+main .registration-form form h2 {
   font-size: 18px;
   padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 1rem;
 }
 
-main .form p {
+main .registration-form form p {
   padding-top: 5px;
 }
 
+main .registration-form form .contact-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .registration-form form .contact-form {
+  position: relative;
+  padding: 0 1rem;
+}
+
+main .registration-form form .contact-text-container input[type=text],
+main .registration-form form .contact-text-container input[type=email] {
+  width: 100%;
+  outline: none;
+  padding: 5px 0;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #9ea1a3;
+  background-color: inherit;
+}
+
+main .registration-form form .contact-text-container label {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  color: #9ea1a3;
+  padding: 5px 0;
+  font-size: 1rem;
+  pointer-events: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main .registration-form form .contact-text-container input:focus ~ label,
+main .registration-form form .contact-text-container input:valid ~ label {
+  top: -20px;
+  left: 1rem;
+  color: #FCB5AF;
+  font-size: 0.8rem;
+}
+
+main .registration-desc {
+  width: 400px;
+  background-color: #FDECE4;
+}
+
 main footer {
-  background-color: #FCB5AF;
+  background-color: #FDECE4;
 }
 
 main footer .container {
