@@ -347,7 +347,7 @@ body {
           align-items: center;
   z-index: 10;
   padding: 0.5rem;
-  background: #A6C1EE;
+  background: #6f9dec;
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -373,7 +373,7 @@ body {
 }
 
 .active:hover::before {
-  background: #FCB5AF;
+  background: #6f9dec;
 }
 
 .active::before {
@@ -503,10 +503,12 @@ body {
 .nav-logo {
   -webkit-transition: all 500ms cubic-bezier(0.2, 1, 0.2, 1);
   transition: all 500ms cubic-bezier(0.2, 1, 0.2, 1);
+  position: relative;
+  top: 4px;
 }
 
 .nav-logo:hover {
-  color: #A6C1EE;
+  color: #6f9dec;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transform: color;
@@ -519,7 +521,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #A6C1EE;
+  color: #6f9dec;
 }
 
 .nav-toggle {
@@ -763,12 +765,67 @@ main .registration form input[type=submit] {
   cursor: pointer;
 }
 
+main .registration form input[type=submit]:hover {
+  background-color: #6f9dec;
+}
+
 main footer {
   background-color: #DDE3FD;
 }
 
 main footer .container {
   height: 150px;
+}
+
+#spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  will-change: transform;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {
