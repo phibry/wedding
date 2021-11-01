@@ -21,6 +21,25 @@
       margin-bottom: 1.5rem;
     }
   }
+
+  main {
+    .registration {
+      form {
+        .contact-group {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-radio-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+
+
+
+
+
 }
 
 // Smartphones

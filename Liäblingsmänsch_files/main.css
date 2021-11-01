@@ -29,7 +29,7 @@ html {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 p,
@@ -347,7 +347,7 @@ body {
           align-items: center;
   z-index: 10;
   padding: 0.5rem;
-  background: #A6C1EE;
+  background: #FCB5AF;
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -446,7 +446,7 @@ body {
   width: 100%;
   position: fixed;
   z-index: 100;
-  background-color: #DDE3FD;
+  background-color: #FDECE4;
   font-weight: 600;
 }
 
@@ -474,7 +474,7 @@ body {
     margin: 0 auto;
     padding: 2.5rem 0 0;
     text-align: center;
-    background-color: #DDE3FD;
+    background-color: #FDECE4;
     -webkit-transition: .4s;
     transition: .4s;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -506,7 +506,7 @@ body {
 }
 
 .nav-logo:hover {
-  color: #A6C1EE;
+  color: #FCB5AF;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transform: color;
@@ -519,7 +519,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #A6C1EE;
+  color: #FCB5AF;
 }
 
 .nav-toggle {
@@ -536,6 +536,7 @@ main section {
 }
 
 main .container {
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -561,7 +562,7 @@ main .registration {
 }
 
 main .registration-container {
-  max-width: 800px;
+  width: 800px;
 }
 
 main .registration form {
@@ -585,10 +586,9 @@ main .registration form .contact-form-icon {
 }
 
 main .registration form .contact-group {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main .registration form .contact-form {
@@ -600,26 +600,33 @@ main .registration form .contact-text-container input[type=text],
 main .registration form .contact-text-container input[type=email] {
   width: 100%;
   outline: none;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 5px;
+  padding: 5px 0;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 30px;
   border: none;
-  border: 2px solid #A6C1EE;
+  border-bottom: 1px solid #9ea1a3;
+  background-color: inherit;
 }
 
 main .registration form .contact-text-container label {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  color: #9ea1a3;
+  padding: 5px 0;
+  font-size: 1rem;
+  pointer-events: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+main .registration form .contact-text-container input:focus ~ label,
+main .registration form .contact-text-container input:valid ~ label {
+  top: -20px;
+  left: 1rem;
+  color: #FCB5AF;
   font-size: 0.8rem;
-}
-
-main .registration form .contact-text-container input:focus {
-  background-color: #DDE3FD;
-}
-
-main .registration form .contact-text-container input:-webkit-autofill,
-main .registration form .contact-text-container textarea:-webkit-autofill,
-main .registration form .contact-text-container select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #DDE3FD inset;
-  box-shadow: 0 0 0px 1000px #DDE3FD inset;
 }
 
 main .registration form .contact-sleep-radio h3,
@@ -627,148 +634,109 @@ main .registration form .contact-food-radio h3 {
   font-size: 1rem;
 }
 
-main .registration form .contact-sleep-radio,
-main .registration form .contact-food-radio {
-  padding: 4px;
-  border-radius: 3px;
-  position: relative;
+main footer {
+  background-color: #FDECE4;
 }
 
-main .registration form .contact-sleep-radio input,
-main .registration form .contact-food-radio input {
-  width: auto;
+main footer .container {
+  height: 150px;
+}
+
+.wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: #fff;
+  height: 100px;
+  width: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .option {
+  background: #fff;
   height: 100%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 2px;
-  padding: 4px 8px;
-  color: #333;
-  font-size: 14px;
-}
-
-main .registration form .contact-sleep-radio input:checked,
-main .registration form .contact-food-radio input:checked {
-  background-color: #DDE3FD;
-  color: #000;
-}
-
-main .registration form .contact-sleep-radio input:before,
-main .registration form .contact-food-radio input:before {
-  content: attr(label);
-  display: inline-block;
-  text-align: center;
   width: 100%;
-}
-
-main .registration form .contact-radio-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  padding-top: 20px;
-}
-
-main .registration form .contact-radio-container-1, main .registration form .contact-radio-container-2 {
-  padding-left: 16px;
-}
-
-main .registration form .contact-radio-container-1 h3, main .registration form .contact-radio-container-2 h3 {
-  margin-bottom: 10px;
-}
-
-main .registration form .radio-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-main .registration form .radio-form label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  font-weight: bold;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 0.375em;
-}
-
-main .registration form .radio-form label input {
-  position: absolute;
-  left: -9999px;
-}
-
-main .registration form .radio-form label input:checked + span {
-  background-color: #f1f5fc;
-}
-
-main .registration form .radio-form label input:checked + span:before {
-  -webkit-box-shadow: inset 0 0 0 0.4375em #A6C1EE;
-          box-shadow: inset 0 0 0 0.4375em #A6C1EE;
-}
-
-main .registration form .radio-form label span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.375em 0.75em 0.375em 0.375em;
-  border-radius: 99em;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-}
-
-main .registration form .radio-form label span:hover {
-  background-color: #f1f5fc;
-}
-
-main .registration form .radio-form label span:before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  content: "";
-  background-color: #fff;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  margin-right: 0.375em;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
-  -webkit-box-shadow: inset 0 0 0 0.125em #A6C1EE;
-          box-shadow: inset 0 0 0 0.125em #A6C1EE;
-}
-
-main .registration form input[type=submit] {
-  font-size: 24px;
-  padding: 20px 30px;
-  margin-left: 16px;
-  margin-top: 16px;
-  border-radius: 8px;
-  border: none;
-  background-color: #A6C1EE;
-  color: #fff;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
   cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-main footer {
-  background-color: #DDE3FD;
+.wrapper .option {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
 }
 
-main footer .container {
-  height: 150px;
+.wrapper .option {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #FCB5AF;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  border-color: #FCB5AF;
+  background: #FCB5AF;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  background: #fff;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2 {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span {
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -790,14 +758,6 @@ main footer .container {
   .nav-item {
     margin-left: 0 !important;
     margin-bottom: 1.5rem;
-  }
-  main .registration form .contact-group {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  main .registration form .contact-radio-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=main.css.map */

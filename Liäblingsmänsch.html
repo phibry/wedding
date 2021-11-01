@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5500/wedding.html#registration -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./Liäblingsmänsch_files/main.css">
+    <link href="./Liäblingsmänsch_files/icon" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Serif:ital@1&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Liäblingsmänsch_files/css2" rel="stylesheet">
+    <title>Liäblingsmänsch</title>
+  </head>
+  <body>
+    <!-- Scroll Top Arrow -->
+    <a href="http://127.0.0.1:5500/wedding.html#" class="scroll-top scroll-top-icon show-scroll">
+      <span class="material-icons">expand_less</span>
+    </a>
+    <!-- Header Section -->
+    <header class="header scroll-header" id="header">
+      <!-- Navigation -->
+      <nav class="nav container">
+        <a href="http://127.0.0.1:5500/wedding.html#" class="nav-logo">phibry</a>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="http://127.0.0.1:5500/wedding.html#process" class="nav-link">Ablauf</a>
+            </li>
+            <li class="nav-item">
+              <a href="http://127.0.0.1:5500/wedding.html#location" class="nav-link">Locations</a>
+            </li>
+            <li class="nav-item">
+              <a href="http://127.0.0.1:5500/wedding.html#info" class="nav-link">Informationen</a>
+            </li>
+            <li class="nav-item">
+              <a href="http://127.0.0.1:5500/wedding.html#registration" class="nav-link active">Anmeldung</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Mobile Hamburger -->
+        <div id="nav-toggle" class="nav-toggle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Ablauf -->
+      <section id="process" class="process">
+        <div class="container process-container">
+          <h1>Ablauf</h1>
+        </div>
+      </section>
+
+      <!-- Location -->
+      <section id="location" class="location">
+        <div class="container location-container">
+          <h1>Locations</h1>
+        </div>
+      </section>
+
+      <!-- Information -->
+      <section id="info" class="info">
+        <div class="container info-container">
+          <h1>Informationen</h1>
+        </div>
+      </section>
+
+      <!-- Anmeldung -->
+      <section id="registration" class="registration">
+        <h1>Anmeldung</h1>
+        <div class="container registration-container">
+          <form method="post" autocomplete="off" class="form" name="google-sheet">
+            <!-- Person -->
+            <div class="contact-text-container">
+              <h2>
+                <span class="contact-form-icon material-icons"> person </span>Zur Person
+              </h2>
+
+              <div class="contact-group">
+                <div class="contact-name contact-form">
+                  <input type="text" class="contact-input" name="name" required="">
+                  <label for="name">Name</label>
+                </div>
+                <div class="contact-surname contact-form">
+                  <input type="text" class="contact-input" name="surname" required="">
+                  <label for="surname">Vorname</label>
+                </div>
+              </div>
+
+              <div class="contact-birthday contact-form">
+                <input type="text" name="birthday" required="">
+                <label for="birthday">Geburtstag <span>(DD-MM-YYYY)</span></label>
+              </div>
+              <div class="contact-email contact-form">
+                <input type="email" class="contact-input" name="email" required="">
+                <label for="email">Email</label>
+              </div>
+
+              <!-- Adress -->
+              <h2>
+                <span class="contact-form-icon material-icons">
+                  location_on </span>Zum Wohnort
+              </h2>
+              <div class="contact-group">
+                <div class="contact-street contact-form">
+                  <input type="text" class="contact-input" name="street" required="">
+                  <label for="street">Strasse</label>
+                </div>
+                <div class="contact-streetnr contact-form">
+                  <input type="text" class="contact-input" name="streetnr" required="">
+                  <label for="streetnr">Hausnummer</label>
+                </div>
+              </div>
+
+              <div class="contact-group">
+                <div class="contact-zip contact-form">
+                  <input type="text" class="contact-input" name="zip" required="">
+                  <label for="zip">Postleitzahl</label>
+                </div>
+                <div class="contact-location contact-form">
+                  <input type="text" class="contact-input" name="location" required="">
+                  <label for="location">Ortschaft</label>
+                </div>
+              </div>
+
+              <div class="contact-group">
+                <div class="contact-canton contact-form">
+                  <input type="text" class="contact-input" name="canton" required="">
+                  <label for="canton">Kanton</label>
+                </div>
+                <div class="contact-land contact-form">
+                  <input type="text" class="contact-input" name="land" required="">
+                  <label for="land">Land</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Party -->
+            <h2>
+              <span class="contact-form-icon material-icons"> celebration </span>Zum Fest
+            </h2>
+            <div class="contact-sleep-radio">
+              <h3>
+                <span class="contact-form-icon material-icons"> bed </span>
+                Schlafen
+              </h3>
+              <div class="contact-sleep contact-form">
+                <input type="radio" class="contact-input" id="one" name="sleep" value="1" required="">
+                <label for="one">1 Nacht</label>
+              </div>
+
+              <div class="contact-sleep contact-form">
+                <input type="radio" class="contact-input-radio" id="two" name="sleep" value="2" required="">
+                <label for="two">2 Nächte</label>
+              </div>
+
+              <div class="contact-sleep contact-form">
+                <input type="radio" class="contact-input-radio" id="zero" name="sleep" value="0" required="">
+                <label for="zero">Ohne Übernachtung</label>
+              </div>
+            </div>
+
+            <div class="contact-food-radio">
+              <h3>
+                <span class="contact-form-icon material-icons">
+                  restaurant
+                </span>
+                Ernährung
+              </h3>
+              <div class="contact-food contact-form">
+                <input type="radio" class="contact-input-radio" id="vegi" value="vegi" name="food" required="">
+                <label for="vegi">Vegetarisch</label>
+              </div>
+              <div class="contact-food contact-form">
+                <input type="radio" class="contact-input-radio" name="food" id="meat" value="meat" required="">
+                <label for="meat">Fleisch</label>
+              </div>
+            </div>
+
+            <!-- <button type="submit">Anmelden</button> -->
+            <input type="submit" name="submit" value="Submit">
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container footer-container"><h1>footer</h1></div>
+      </footer>
+    </main>
+
+    <div class="wrapper">
+      <input type="radio" name="select" id="option-1" checked="">
+      <input type="radio" name="select" id="option-2">
+      <label for="option-1" class="option option-1">
+        <span>Student</span>
+      </label>
+      <label for="option-2" class="option option-2">
+        <span>Teacher</span>
+      </label>
+    </div>
+
+    <!-- JS -->
+    <script src="./Liäblingsmänsch_files/main.js"></script>
+    <script src="./Liäblingsmänsch_files/google.js"></script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
