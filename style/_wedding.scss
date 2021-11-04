@@ -22,7 +22,7 @@ body {
   }
 
   &-icon {
-    color: #000;
+    color: #fff;
     font-size: 1.3rem;
   }
 }
@@ -114,6 +114,7 @@ body {
 }
 
 .nav {
+  max-width: 1350px;
   margin: 0 auto;
   height: 4.5rem;
   display: flex;
@@ -166,7 +167,6 @@ body {
   }
 
   &-link {
-    // color: #333;
     transition: color 0.1s ease;
 
     &:hover {
@@ -185,6 +185,26 @@ body {
 
 // Main
 main {
+  .landing {
+    height: 400px;
+    background-color: $sub-color-3;
+    
+    padding-top: 100px;
+
+    &-content {
+      margin: 0 auto;
+      display: flex;
+
+      &-text {
+        width: 50%;
+      }
+
+      &-img {
+        width: 50%;
+      }
+    }
+  }
+
   section {
     margin: 1rem 0;
     padding: 5rem 0;
@@ -249,7 +269,7 @@ main {
         input[type=email] {
           width: 100%;
           outline: none;
-          border-radius: 8px;
+          border-radius: 3px;
           padding: 16px;
           margin-top: 5px;
           // font-size: 1rem;
@@ -265,15 +285,23 @@ main {
         }
 
         input:focus {
-          background-color: $sub-color-3;
+          background-color: mix(#fff, $main-color-3, 84%);
         }
 
         input:-webkit-autofill,
         textarea:-webkit-autofill,
         select:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px $sub-color-3 inset;
-        box-shadow: 0 0 0px 1000px $sub-color-3 inset;
-        // -webkit-text-fill-color: black;
+        -webkit-box-shadow: 0 0 0px 1000px mix(#fff, $main-color-3, 84%) inset;
+        box-shadow: 0 0 0px 1000px mix(#fff, $main-color-3, 84%) inset;
+        }
+
+        input:not(:placeholder-shown) {
+          background-color: mix(#fff, $main-color-3, 84%);
+        }
+        
+        /* If input is empty */
+        input:placeholder-shown {
+          background-color: #fff;
         }
       }
 
@@ -384,7 +412,7 @@ main {
         padding: 20px 30px;
         margin-left: 16px;
         margin-top: 16px;
-        border-radius: 8px;
+        border-radius: 3px;
         border: none;
         background-color: $main-color-3;
         // background-color: rgb(255, 119, 119);
@@ -404,6 +432,9 @@ main {
     background-color: $sub-color-3;
     .container {
       height: 150px;
+      h4 {
+        padding-top: 20px;
+      }
     }
   }
 }
@@ -417,6 +448,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 #spinner::after {
@@ -424,7 +456,7 @@ main {
   width: 80px;
   height: 80px;
   border: 2px solid #f3f3f3;
-  border-top: 3px solid #f25a41;
+  border-top: 3px solid $main-color-3;
   border-radius: 100%;
   will-change: transform;
   animation: spin 1s infinite linear
@@ -436,5 +468,49 @@ main {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+#modal:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  background-color: $sub-color-1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+  padding: 1rem;
+
+  &-header {
+    padding-top: 20px;
+  }
+
+  &-content {
+    p {
+      margin: 10px 0;
+    }
+  }
+}
+
+.close-btn {
+  float: right;
+  background-color: $main-color-1;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+
+  cursor: pointer;
+
+  .material-icons {
+    position: relative;
+    top: 1.5px;
   }
 }

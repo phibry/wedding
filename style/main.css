@@ -75,7 +75,7 @@ ul {
 }
 
 .landing-container .img {
-  width: 35%;
+  width: 50%;
   position: relative;
   border-radius: 3px;
 }
@@ -90,7 +90,7 @@ ul {
 
 .landing-container .main {
   padding: 30px 60px;
-  width: 65%;
+  width: 50%;
   display: -ms-grid;
   display: grid;
 }
@@ -120,14 +120,17 @@ ul {
 
 .landing-container .main-header-date {
   padding: 30px;
+  font-size: 2rem;
 }
 
 .landing-container .main-info-title {
   padding-bottom: 20px;
+  font-size: 2.5rem;
 }
 
 .landing-container .main-info-p {
   width: 100%;
+  font-size: 1.5rem;
 }
 
 .landing-container .main-infoBtn {
@@ -232,7 +235,7 @@ ul {
     font-size: 28px;
   }
   .landing-container p {
-    font-size: 16px;
+    font-size: 20px;
     padding: 0 10px;
   }
   .landing-container .card {
@@ -359,7 +362,7 @@ body {
 }
 
 .scroll-top-icon {
-  color: #000;
+  color: #fff;
   font-size: 1.3rem;
 }
 
@@ -451,6 +454,7 @@ body {
 }
 
 .nav {
+  max-width: 1350px;
   margin: 0 auto;
   height: 4.5rem;
   display: -webkit-box;
@@ -532,6 +536,27 @@ body {
   top: 6rem;
 }
 
+main .landing {
+  height: 400px;
+  background-color: #DDE3FD;
+  padding-top: 100px;
+}
+
+main .landing-content {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .landing-content-text {
+  width: 50%;
+}
+
+main .landing-content-img {
+  width: 50%;
+}
+
 main section {
   margin: 1rem 0;
   padding: 5rem 0;
@@ -598,11 +623,15 @@ main .registration form .contact-form {
   padding: 0 1rem;
 }
 
+main .registration form .contact-text-container {
+  /* If input is empty */
+}
+
 main .registration form .contact-text-container input[type=text],
 main .registration form .contact-text-container input[type=email] {
   width: 100%;
   outline: none;
-  border-radius: 8px;
+  border-radius: 3px;
   padding: 16px;
   margin-top: 5px;
   border: none;
@@ -614,14 +643,22 @@ main .registration form .contact-text-container label {
 }
 
 main .registration form .contact-text-container input:focus {
-  background-color: #DDE3FD;
+  background-color: #f1f5fc;
 }
 
 main .registration form .contact-text-container input:-webkit-autofill,
 main .registration form .contact-text-container textarea:-webkit-autofill,
 main .registration form .contact-text-container select:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #DDE3FD inset;
-  box-shadow: 0 0 0px 1000px #DDE3FD inset;
+  -webkit-box-shadow: 0 0 0px 1000px #f1f5fc inset;
+  box-shadow: 0 0 0px 1000px #f1f5fc inset;
+}
+
+main .registration form .contact-text-container input:not(:placeholder-shown) {
+  background-color: #f1f5fc;
+}
+
+main .registration form .contact-text-container input:placeholder-shown {
+  background-color: #fff;
 }
 
 main .registration form .contact-sleep-radio h3,
@@ -758,7 +795,7 @@ main .registration form input[type=submit] {
   padding: 20px 30px;
   margin-left: 16px;
   margin-top: 16px;
-  border-radius: 8px;
+  border-radius: 3px;
   border: none;
   background-color: #A6C1EE;
   color: #fff;
@@ -777,6 +814,10 @@ main footer .container {
   height: 150px;
 }
 
+main footer .container h4 {
+  padding-top: 20px;
+}
+
 #spinner:not([hidden]) {
   position: fixed;
   top: 0;
@@ -792,6 +833,7 @@ main footer .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 100;
 }
 
 #spinner::after {
@@ -799,7 +841,7 @@ main footer .container {
   width: 80px;
   height: 80px;
   border: 2px solid #f3f3f3;
-  border-top: 3px solid #f25a41;
+  border-top: 3px solid #A6C1EE;
   border-radius: 100%;
   will-change: transform;
   -webkit-animation: spin 1s infinite linear;
@@ -826,6 +868,53 @@ main footer .container {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+#modal:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  background-color: #FDECE4;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 1rem;
+}
+
+.modal-header {
+  padding-top: 20px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.close-btn {
+  float: right;
+  background-color: #FCB5AF;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.close-btn .material-icons {
+  position: relative;
+  top: 1.5px;
 }
 
 @media (max-width: 768px) {

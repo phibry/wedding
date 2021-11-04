@@ -26,7 +26,7 @@
   </head>
   <body>
     <!-- Scroll Top Arrow -->
-    <a href="#" class="scroll-top scroll-top-icon">
+    <a href="#" class="scroll-top scroll-top-icon" id="scroll-top">
       <span class="material-icons">expand_less</span>
     </a>
     <!-- Header Section -->
@@ -62,11 +62,31 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main">
+      <div class="landing">
+        <div class="landing-content container">
+          <div class="landing-content-text">
+            Mir hürated und froied ois, dä einzigartig Tag mit dir dörfe
+            z'verbringe!
+          </div>
+          <div class="landing-content-img">hello img</div>
+        </div>
+      </div>
       <!-- Ablauf -->
       <section id="process" class="process">
         <div class="container process-container">
           <h1>Ablauf</h1>
+          <p>
+            Ablauf Am 27. August 2022 wärded mir ois nach meh als 10 Jahr
+            hürate. Mir träffed ois am 13:15 Uhr uf em Parkplatz .... in Sarne.
+            Dänn holt ois de Bus ab und bringt ois zu de Kapelle Ramersberg. Am
+            14:00 Uhr startet oisi Trauig und gaht ungefähr ei Stund.
+            Aschlüssend bringt ois de Bus wieder zum Parkplatz wo jede wieder is
+            eigete Auto stigt und direkt uf d'Mörlialp is Gruppehuus fahrt. Mir
+            wärded dete oisi Hochzit fiire und di gmeinsami Zit chöne gnüsse. Es
+            het gnueg Platz für alli d'Nacht im Huus z'verbringe und am Sunntig
+            no gmeinsam en Zmorge mache.
+          </p>
         </div>
       </section>
 
@@ -74,6 +94,7 @@
       <section id="location" class="location">
         <div class="container location-container">
           <h1>Locations</h1>
+          <p>Locations Kapelle Ramersberg Gruppenhaus Mörlialp</p>
         </div>
       </section>
 
@@ -85,7 +106,6 @@
       </section>
 
       <!-- Anmeldung -->
-      <div hidden id="spinner"></div>
       <section id="registration" class="registration">
         <h1>Anmeldung</h1>
         <div class="container registration-container">
@@ -109,6 +129,7 @@
                     type="text"
                     class="contact-input"
                     name="name"
+                    placeholder=" "
                     required
                   />
                 </div>
@@ -119,6 +140,7 @@
                     type="email"
                     class="contact-input"
                     name="email"
+                    placeholder=" "
                     required
                   />
                 </div>
@@ -127,11 +149,11 @@
               <div class="contact-group">
                 <div class="contact-birthday contact-form">
                   <label for="birthday">Geburtsdatum</label>
-                  <input type="text" name="birthday" required />
+                  <input type="text" name="birthday" placeholder=" " required />
                 </div>
                 <div class="contact-phone contact-form">
                   <label for="phone">Telefon</label>
-                  <input type="text" name="phone" required />
+                  <input type="text" name="phone" placeholder=" " required />
                 </div>
               </div>
 
@@ -148,6 +170,7 @@
                     type="text"
                     class="contact-input"
                     name="street"
+                    placeholder=" "
                     required
                   />
                 </div>
@@ -157,6 +180,7 @@
                     type="text"
                     class="contact-input"
                     name="streetnr"
+                    placeholder=" "
                     required
                   />
                 </div>
@@ -169,6 +193,7 @@
                     type="text"
                     class="contact-input"
                     name="zip"
+                    placeholder=" "
                     required
                   />
                 </div>
@@ -178,6 +203,7 @@
                     type="text"
                     class="contact-input"
                     name="location"
+                    placeholder=" "
                     required
                   />
                 </div>
@@ -193,7 +219,7 @@
                 </h3>
                 <div class="radio-form">
                   <label>
-                    <input type="radio" name="sleep" checked value="1" />
+                    <input type="radio" name="sleep" value="1" />
                     <span>1 Nacht</span>
                   </label>
                   <label>
@@ -215,7 +241,7 @@
                 </h3>
                 <div class="radio-form">
                   <label>
-                    <input type="radio" name="food" value="meat" checked />
+                    <input type="radio" name="food" value="meat" />
                     <span>Fleisch</span>
                   </label>
                   <label>
@@ -234,9 +260,34 @@
 
       <!-- Footer -->
       <footer class="footer">
-        <div class="container footer-container"><h1>footer</h1></div>
+        <div class="container footer-container">
+          <h4>Gern chasch eus au per Mail oder telefonisch kontaktiere</h4>
+        </div>
       </footer>
     </main>
+
+    <div hidden id="spinner"></div>
+    <div hidden class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <span class="material-icons"> close </span>
+        </button>
+
+        <div class="modal-header">
+          <h3>Schön bisch du debi!</h3>
+        </div>
+
+        <div class="modal-content">
+          <p class="modal-content-p">
+            Du wirsch vo eus bald e Bestätigung für dini Ameldig becho.
+          </p>
+
+          <p class="modal-content-p">
+            Chunsch nöd allei, dänn füll sFormular bitte nomal us.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- JS -->
     <script src="js/main.js"></script>

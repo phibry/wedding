@@ -2,7 +2,7 @@
 const scrollHeader = () => {
   const nav = document.getElementById('header');
   // When the scroll is greater than 100, add the scroll-header class to the header tag
-  if (scrollY >= 100) {
+  if (scrollY >= 350) {
     nav.classList.add('scroll-header');
     // nav.style.display = 'block';
   } else {
