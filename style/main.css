@@ -537,7 +537,6 @@ body {
 }
 
 main .landing {
-  height: 400px;
   background-color: #DDE3FD;
   font-family: 'Montserrat', sans-serif;
   padding-top: 100px;
@@ -562,10 +561,11 @@ main .btn {
   color: #fff;
   position: relative;
   margin-top: 3rem;
+  margin-bottom: 6rem;
 }
 
 main .btn:hover {
-  background: #333;
+  background: #222;
 }
 
 main section {
@@ -820,40 +820,19 @@ main .footer {
   background-color: #DDE3FD;
 }
 
-main .footer-container {
-  max-width: 800px;
-  padding: 20px 0;
+main .footer-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding-top: 40px;
 }
 
-main .footer-container h3 {
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-}
-
-main .footer-contact {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
-main .footer-contact-element ul li {
-  margin-top: 10px;
-}
-
-main .footer-contact-element ul li a {
-  color: #000;
-}
-
-main .footer-contact-element ul li a .material-icons {
-  font-size: 16px;
-  position: relative;
-  top: 1.5px;
-  margin-right: 2px;
-}
-
-main .footer-contact-element ul li a:hover {
-  color: #A6C1EE;
+main .footer-icon .material-icons {
+  font-size: 7rem;
 }
 
 main .footer-copy {
@@ -864,7 +843,7 @@ main .footer-copy {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin-top: 10vw;
+  padding: 40px 0 30px;
 }
 
 #spinner:not([hidden]) {
