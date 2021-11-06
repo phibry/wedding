@@ -502,6 +502,7 @@ body {
 
 .nav-link, .nav-logo, .nav-item {
   color: #333;
+  font-size: 20px;
 }
 
 .nav-logo {
@@ -536,6 +537,10 @@ body {
   top: 6rem;
 }
 
+main h1 {
+  font-size: 40px;
+}
+
 main .landing {
   background-color: #DDE3FD;
   font-family: 'Montserrat', sans-serif;
@@ -554,18 +559,55 @@ main .landing-content-text {
   font-size: 24px;
 }
 
-main .btn {
+main .landing-content-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+}
+
+main .landing-content-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80%;
+  height: 80%;
+}
+
+main .call-to-action .btn {
   display: inline-block;
   background: #000;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   color: #fff;
   position: relative;
   margin-top: 3rem;
-  margin-bottom: 6rem;
 }
 
-main .btn:hover {
-  background: #222;
+main .call-to-action .btn:hover {
+  background: #6f9dec;
+}
+
+main .call-to-action .more {
+  padding-left: 30px;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #000;
+}
+
+main .call-to-action .more:hover {
+  color: #6f9dec;
+}
+
+main .call-to-action .more:after {
+  content: '';
+  display: block;
+  border-bottom: 3px solid #6f9dec;
+  width: 100%;
 }
 
 main section {
@@ -577,29 +619,68 @@ main .container {
   margin: 0 auto;
 }
 
-main .process-container {
+main .map-link {
+  color: #6f9dec;
+}
+
+main .map-link:hover {
+  color: #A6C1EE;
+}
+
+main .info-container p {
+  font-size: 20px;
+  padding: 5px 1rem;
+}
+
+main .location {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main .location-container {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
-main .registration {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+main .location-container .img {
+  width: 100%;
+  padding: 20px;
 }
 
-main .registration-container {
-  max-width: 800px;
+main .location-container .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .location-container .info {
+  padding: 20px;
+}
+
+main .location-container .info h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+main .location-container .info p {
+  font-size: 20px;
+}
+
+main .location-container .info-p-link {
+  margin-top: 20px;
+}
+
+main .location .house {
+  padding-top: 50px;
+}
+
+main .location .house .info {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
 }
 
 main .registration form {
@@ -607,9 +688,8 @@ main .registration form {
 }
 
 main .registration form h2 {
-  font-size: 18px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   padding-left: 1rem;
 }
 
@@ -618,6 +698,7 @@ main .registration form p {
 }
 
 main .registration form .contact-form-icon {
+  font-size: 30px;
   position: relative;
   top: 5px;
 }
@@ -627,11 +708,17 @@ main .registration form .contact-group {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  padding-bottom: 20px;
 }
 
 main .registration form .contact-form {
   position: relative;
   padding: 0 1rem;
+}
+
+main .registration form .contact-form label[for="birthday"] span,
+main .registration form .contact-form label[for="phone"] span {
+  color: #b6b6b6;
 }
 
 main .registration form .contact-text-container {
@@ -644,13 +731,14 @@ main .registration form .contact-text-container input[type=email] {
   outline: none;
   border-radius: 3px;
   padding: 16px;
-  margin-top: 5px;
+  margin-top: 7px;
   border: none;
   border: 2px solid #A6C1EE;
+  font-size: 16px;
 }
 
 main .registration form .contact-text-container label {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 main .registration form .contact-text-container input:focus {
@@ -718,7 +806,6 @@ main .registration form .contact-radio-container {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  padding-top: 20px;
 }
 
 main .registration form .contact-radio-container-1, main .registration form .contact-radio-container-2 {
@@ -945,6 +1032,21 @@ main .footer-copy {
   top: 1.5px;
 }
 
+@media (min-width: 851px) and (max-width: 1100px) {
+  main .landing-content-text a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 850px) {
+  main .landing-content-text .call-to-action a {
+    font-size: 16px;
+  }
+  main .landing-content-text .call-to-action .more {
+    padding-left: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -965,15 +1067,77 @@ main .footer-copy {
     margin-left: 0 !important;
     margin-bottom: 1.5rem;
   }
+  main .landing-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main .landing-content-text .call-to-action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .landing-content-text .call-to-action a {
+    font-size: 16px;
+  }
+  main .landing-content-text .call-to-action .more {
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+  main .info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .location .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .location-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main .location .house .info {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  main .registration .container h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   main .registration form .contact-group {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+  main .registration form .contact-form {
+    padding: 10px 1rem;
   }
   main .registration form .contact-radio-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  main .footer-contact {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }

@@ -40,13 +40,10 @@
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#process" class="nav-link active">Ablauf</a>
+              <a href="#info" class="nav-link">Infos</a>
             </li>
             <li class="nav-item">
               <a href="#location" class="nav-link">Locations</a>
-            </li>
-            <li class="nav-item">
-              <a href="#info" class="nav-link">Informationen</a>
             </li>
             <li class="nav-item">
               <a href="#registration" class="nav-link">Anmeldung</a>
@@ -68,48 +65,89 @@
           <div class="landing-content-text">
             <h1>Mir hürated</h1>
             <p>und froied ois, dä einzigartig Tag mit dir dörfe z'verbringe!</p>
-            <a href="#registration" class="btn">Meld dich ah</a>
+            <div class="call-to-action">
+              <a href="#registration" class="btn">MELD DICH AH</a>
+              <a href="#info" class="more">ERFAHR MEH</a>
+            </div>
           </div>
-          <div class="landing-content-img">hello img</div>
+          <div class="landing-content-img">
+            <img src="img/black-2.jpg" alt="" />
+          </div>
         </div>
       </div>
-      <!-- Ablauf -->
-      <section id="process" class="process">
-        <div class="container process-container">
-          <h1>Ablauf</h1>
+      <!-- Info -->
+      <section id="info" class="info">
+        <div class="container info-container">
+          <h1>Infos</h1>
+          <p>Am 27. August 2022 wärded mir nach meh als 10 Jahr hürate.</p>
+
           <p>
-            Ablauf Am 27. August 2022 wärded mir ois nach meh als 10 Jahr
-            hürate. Mir träffed ois am 13:15 Uhr uf em Parkplatz .... in Sarne.
-            Dänn holt ois de Bus ab und bringt ois zu de Kapelle Ramersberg. Am
-            14:00 Uhr startet oisi Trauig und gaht ungefähr ei Stund.
-            Aschlüssend bringt ois de Bus wieder zum Parkplatz wo jede wieder is
-            eigete Auto stigt und direkt uf d'Mörlialp is Gruppehuus fahrt. Mir
-            wärded dete oisi Hochzit fiire und di gmeinsami Zit chöne gnüsse. Es
-            het gnueg Platz für alli d'Nacht im Huus z'verbringe und am Sunntig
-            no gmeinsam en Zmorge mache.
+            Mir träffed ois am 13:15 Uhr uf em
+            <a
+              class="map-link"
+              href="https://goo.gl/maps/ozcPS8HTAYxCeFdu5"
+              target="_blank"
+              >Parkplatz</a
+            >
+            in Sarne. Dete holt ois de Bus ab und bringt ois zu de Kapelle
+            Ramersberg. Am 14:00 Uhr startet oisi Trauig und gaht ungefähr ei
+            Stund. Aschlüssend bringt ois de Bus wieder zum Parkplatz wo jede
+            wieder is eigete Auto stigt und direkt uf d'Mörlialp is Gruppehuus
+            fahrt. Mir wärded dete oisi Hochzit fiire und di gmeinsami Zit chöne
+            gnüsse. Es het gnueg Platz für alli d'Nacht im Huus z'verbringe und
+            am Sunntig no gmeinsam en Zmorge mache.
           </p>
         </div>
       </section>
 
       <!-- Location -->
       <section id="location" class="location">
-        <div class="container location-container">
+        <div class="container">
           <h1>Locations</h1>
-          <p>Locations Kapelle Ramersberg Gruppenhaus Mörlialp</p>
-        </div>
-      </section>
+          <div class="location-container chapel">
+            <div class="img">
+              <img src="img/chapel-2.jpg" alt="Kapelle Ramersberg" />
+            </div>
+            <div class="info">
+              <h3 class="info-title">Kapelle Ramersberg</h3>
+              <p class="info-link">
+                Eusi Trauuig findet ide Kapelle Ramersberg in Sarne statt.
+              </p>
+              <p class="info-p-link">
+                <a
+                  class="map-link"
+                  href="https://goo.gl/maps/1Zk9MgTrQuNxiuBD7"
+                  target="_blank"
+                  >Kapelle</a
+                >
+              </p>
+            </div>
+          </div>
 
-      <!-- Information -->
-      <section id="info" class="info">
-        <div class="container info-container">
-          <h1>Informationen</h1>
+          <div class="location-container house">
+            <div class="img">
+              <img src="img/house.jpg" alt="Berghaus Mörlialp" />
+            </div>
+            <div class="info">
+              <h3 class="info-title">Berghaus Mörlialp</h3>
+              <p class="info-p">Mir fiired sFest im Berghuus Mörlialp</p>
+              <p class="info-p-link">
+                <a
+                  class="map-link"
+                  href="https://goo.gl/maps/KKocQGp6FDj3sWpP7"
+                  target="_blank"
+                  >Berghaus</a
+                >
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Anmeldung -->
       <section id="registration" class="registration">
-        <h1>Anmeldung</h1>
         <div class="container registration-container">
+          <h1>Anmeldung</h1>
           <form
             method="post"
             autocomplete="off"
@@ -149,11 +187,15 @@
 
               <div class="contact-group">
                 <div class="contact-birthday contact-form">
-                  <label for="birthday">Geburtsdatum</label>
+                  <label for="birthday"
+                    >Geburtsdatum <span>DD:MM:YY</span></label
+                  >
                   <input type="text" name="birthday" placeholder=" " required />
                 </div>
                 <div class="contact-phone contact-form">
-                  <label for="phone">Telefon</label>
+                  <label for="phone"
+                    >Telefon <span>+41 7X XXX XX XX</span></label
+                  >
                   <input type="text" name="phone" placeholder=" " required />
                 </div>
               </div>
@@ -212,6 +254,10 @@
             </div>
 
             <!-- Party -->
+            <h2 class="contact-radio-title">
+              <span class="contact-form-icon material-icons"> location_on </span
+              >Zum Fest
+            </h2>
             <div class="contact-radio-container">
               <div class="contact-radio-container-1">
                 <h3>
