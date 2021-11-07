@@ -949,6 +949,7 @@ main .registration form input[type=submit] {
   background-color: #A6C1EE;
   color: #fff;
   cursor: pointer;
+  border-radius: 1px;
 }
 
 main .registration form input[type=submit]:hover {
