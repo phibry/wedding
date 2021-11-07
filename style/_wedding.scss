@@ -101,6 +101,10 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,.1);
 }
 
+.title {
+  padding-left: 16px;
+}
+
 // Header
 #header {
   top: 0;
@@ -199,6 +203,9 @@ main {
       grid-template-columns: 1fr 1fr;
 
       &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         font-size: 24px;
       }
 
@@ -255,6 +262,8 @@ main {
   section {
     margin: 1rem 0;
     padding: 5rem 0;
+
+
   }
 
   .container {
@@ -298,6 +307,9 @@ main {
       }
 
       .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 20px;
         h3 {
           font-size: 24px;

@@ -25,6 +25,7 @@ body {
 }
 
 html {
+  --scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
 
@@ -443,6 +444,10 @@ body {
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+.title {
+  padding-left: 16px;
+}
+
 #header {
   top: 0;
   left: 0;
@@ -556,6 +561,16 @@ main .landing-content {
 }
 
 main .landing-content-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 24px;
 }
 
@@ -656,6 +671,16 @@ main .location-container .img img {
 }
 
 main .location-container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 20px;
 }
 
@@ -1140,6 +1165,9 @@ main .footer-copy {
   main .registration form .contact-radio-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .title {
+    padding-left: 0;
   }
 }
 
