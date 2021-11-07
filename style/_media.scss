@@ -31,7 +31,6 @@
         }
       }
     }
-
   }
 }
 
@@ -99,11 +98,6 @@
       }
 
       .house {
-        // .img {
-        //   grid-column: 1;
-        //   grid-row: 1;
-        // }
-
         .info {
           grid-column: auto;
           grid-row: auto;
@@ -135,35 +129,38 @@
       }
     }
   }
-
-
-
-
-
 }
 
 // Smartphones
 @media (max-width: 480px) {
-  // .nav-toggle {
-  //   display: block;
-  // }
 
-  // .nav {
-  //   &-list {
-  //     display: flex;
-  //     align-items: center;
-  //     flex-direction: column;
-  //   }
-
-  //   &-item {
-  //     margin-bottom: 1.5rem;
-  //     margin-left: 0 !important;
-  //   }
-  // }
 }
 
 // Smaller Phones
-@media (max-width: 370px) {}
+@media (max-width: 400px) {
+  main {
+    .landing {
+      &-content {
+        &-text {
+          .call-to-action {
+            a {
+              font-size: 14px;
+            }
+
+            .btn {
+              padding: 1rem;
+            }
+
+            .more {
+              padding-left: 15px;
+              padding: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Smaller Phones
 @media (max-width: 300px) {}

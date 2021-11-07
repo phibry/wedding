@@ -1142,4 +1142,17 @@ main .footer-copy {
         grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 400px) {
+  main .landing-content-text .call-to-action a {
+    font-size: 14px;
+  }
+  main .landing-content-text .call-to-action .btn {
+    padding: 1rem;
+  }
+  main .landing-content-text .call-to-action .more {
+    padding-left: 15px;
+    padding: 1rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
