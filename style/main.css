@@ -841,6 +841,33 @@ main .registration form .contact-radio-container-1 h3, main .registration form .
   margin-bottom: 10px;
 }
 
+main .registration form .contact-message {
+  padding: 16px;
+}
+
+main .registration form .contact-message h3 {
+  margin-bottom: 5px;
+}
+
+main .registration form .contact-message h3 .contact-form-icon {
+  top: 10px;
+}
+
+main .registration form .contact-message #message {
+  width: 100%;
+  padding: 16px;
+  min-height: 200px;
+  border: 2px solid #A6C1EE;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+main .registration form .contact-message #message:focus {
+  background-color: #f1f5fc;
+}
+
 main .registration form .radio-form {
   display: -webkit-box;
   display: -ms-flexbox;
